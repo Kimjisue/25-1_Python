@@ -4,7 +4,7 @@
 #숫자 입력 
 # score = int(input("숫자를 입력하세요 : "))
 
-# if score <= 90 and score >= 100:
+# if score >= 90 and score <= 100:
 #     print("A")
 # elif score <= 89 and score >= 80:
 #     print("B")
