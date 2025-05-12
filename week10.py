@@ -140,54 +140,90 @@
 # if c==3:
 #     print("빠")
 
-import random 
+# import random 
 
-win_user=0
-win_comp=0
+# win_user=0
+# win_comp=0
 
-while True: 
-   c=random.randrange(1,4)
-   user=input("묵찌빠 하나 내세영: ")
+# while True: 
+#    c=random.randrange(1,4)
+#    user=input("묵찌빠 하나 내세영: ")
 
-   if user =="끝":
-      print("프로그램을 종료합니다.")
-      print("사람이 이긴 수 : ",win_user,"// 컴퓨터가 이긴 수 : ",win_comp)
-      break
+#    if user =="끝":
+#       print("프로그램을 종료합니다.")
+#       print("사람이 이긴 수 : ",win_user,"// 컴퓨터가 이긴 수 : ",win_comp)
+#       break
 
-   if c==1:
-      c="묵"
-   if c==2:
-      c="찌"
-   if c==3:
-      c="빠"
+#    if c==1:
+#       c="묵"
+#    if c==2:
+#       c="찌"
+#    if c==3:
+#       c="빠"
 
-   print("사람: ",user, " // 컴퓨터: ",c)
+#    print("사람: ",user, " // 컴퓨터: ",c)
 
-   if user == c: 
-      print("비겼어요")
+#    if user == c: 
+#       print("비겼어요")
 
-   elif user == "묵":
-      if c=="찌":
-         print("사람이 이김")
-         win_user = win_user+1
-      if c=="빠":
-         print("컴퓨터가 이김")
-         win_comp = win_comp+1
+#    elif user == "묵":
+#       if c=="찌":
+#          print("사람이 이김")
+#          win_user = win_user+1
+#       if c=="빠":
+#          print("컴퓨터가 이김")
+#          win_comp = win_comp+1
 
-   elif user == "빠":
-      if c=="묵":
-         print("사람이 이김")
-         win_user = win_user+1
-      if c=="찌":
-         print("컴퓨터가 이김")
-         win_comp = win_comp+1
+#    elif user == "빠":
+#       if c=="묵":
+#          print("사람이 이김")
+#          win_user = win_user+1
+#       if c=="찌":
+#          print("컴퓨터가 이김")
+#          win_comp = win_comp+1
 
-   elif user == "찌":
-      if c=="빠":
-         print("사람이 이김")
-         win_user = win_user+1
-      if c=="묵":
-         print("컴퓨터가 이김")
-         win_comp = win_comp+1
+#    elif user == "찌":
+#       if c=="빠":
+#          print("사람이 이김")
+#          win_user = win_user+1
+#       if c=="묵":
+#          print("컴퓨터가 이김")
+#          win_comp = win_comp+1
+#    else:
+#       print("묵찌빠 중 하나만 입력하세요.")
+
+
+# # ##############################################
+# # ##############################################
+# # ##############################################
+# # ######### 목요일
+
+import random
+import time
+
+t = 0 
+r = 0 
+
+while True:
+   print("\n" * 20)
+   print("=" * 53 + "|🏁")
+
+   if random.random() < 0.5:
+      r += 6
+      print(" " * r + "🐰") 
    else:
-      print("묵찌빠 중 하나만 입력하세요.")
+      print(" " * r + "💤") 
+
+   print("-" * 53 + "|") 
+   print(" " * t + "🐢")
+   print("=" * 53 + "|🏁") 
+
+   t += 3
+   time.sleep(0.3)
+
+   if r > 53:
+      print("토끼 승!")
+      break
+   elif t > 53:
+      print("거북이 승!")
+      break
